@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #190019;
+    color: #fbe4d8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner {
+    background-color: #854f6c;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 80vh;
+    max-width: 1200px;
+    position: relative;
+}
+
+.bitmoji {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bitmoji img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+.bitmoji img:hover {
+    content: url('bitmoji_smile.png');
+    transform: scale(1.1);
+}
+
+.menu {
+    flex: 0.3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item,
+.menu-item1 {
+    background-color: #2b124c;
+    padding: 15px;
+    border-radius: 10px;
+    transition: height 0.4s ease;
+    cursor: pointer;
+    overflow: hidden;
+    color: #fbe4d8;
+    height: 70px;
+}
+
+.menu-item p {
+    margin: 0;
+    transition: opacity 0.4s ease;
+}
+
+.menu-item1 p {
+    margin: 0;
+    transition: opacity 0.4s ease;
+}
+
+.submenu {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.menu-item:hover {
+    background-color: #522b5b;
+    height: 200px;
+}
+
+.menu-item1:hover {
+    background-color: #522b5b;
+    height: 230px;
+}
+
+.menu-item:hover .submenu {
+    opacity: 1;
+}
+
+.menu-item1:hover .submenu {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .menu {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .menu-item {
+        height: 60px;
+        flex: 1;
+    }
+
+    .menu-item1 {
+        height: 60px;
+        flex: 1;
+    }
+}
+
+.link {
+    color: #fbe4d8;
+}
+
+.Experience,
+.Projects,
+.Skills {
+    list-style-type: none;
+}
+
+.Experience li::before,
+.Projects li::before,
+.Skills li::before {
+    content: "⭐";
+    margin-right: 5px;
+}
